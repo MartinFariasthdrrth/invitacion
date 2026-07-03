@@ -5,92 +5,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mis XV - Briana</title>
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-background:linear-gradient(#f8f1ea,#efe3d1);
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-font-family:Georgia,serif;
-overflow:hidden;
-}
-
-#sobre{
-width:320px;
-cursor:pointer;
-transition:1s;
-}
-
-#texto{
-position:absolute;
-bottom:70px;
-font-size:22px;
-color:#8b6c42;
-text-align:center;
-padding:20px;
-}
-
-iframe{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-border:none;
-background:white;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<img id="sobre" src="sobre.png">
+<div id="inicio">
 
-<div id="texto">
-Toca el sobre para abrir tu invitación
+    <div id="brillos"></div>
+
+    <img src="sobre.png" id="sobre">
+
+    <h2>Para ti...</h2>
+
+    <p>Toca el sobre para abrir la invitación</p>
+
 </div>
 
 <audio id="musica">
-<source src="Once Upon a Dream.mp3" type="audio/mpeg">
+    <source src="Once Upon a Dream.mp3" type="audio/mpeg">
 </audio>
 
-<iframe id="pdf"
-src="Copia de MIS XV AÑOS_20260703_141049_0000.pdf">
-</iframe>
+<div id="contenido">
 
-<script>
+    <iframe
+    src="Copia de MIS XV AÑOS_20260703_141049_0000.pdf">
+    </iframe>
 
-const sobre=document.getElementById("sobre");
-const pdf=document.getElementById("pdf");
-const musica=document.getElementById("musica");
+</div>
 
-sobre.onclick=function(){
-
-musica.play();
-
-sobre.style.transform="scale(.2)";
-sobre.style.opacity="0";
-
-document.getElementById("texto").style.display="none";
-
-setTimeout(function(){
-
-pdf.style.display="block";
-
-},1200);
-
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
