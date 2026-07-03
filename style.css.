@@ -1,0 +1,98 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:linear-gradient(180deg,#fdf8f2,#f3e5d0);
+    font-family:Georgia,serif;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* Pantalla de inicio */
+#inicio{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:100vh;
+    text-align:center;
+}
+
+/* Sobre */
+#sobre{
+    width:320px;
+    max-width:80%;
+    cursor:pointer;
+    transition:1.2s;
+    filter:drop-shadow(0 15px 25px rgba(0,0,0,.25));
+}
+
+#sobre:hover{
+    transform:scale(1.03);
+}
+
+/* Títulos */
+h2{
+    margin-top:30px;
+    color:#8b6c42;
+    font-size:36px;
+    font-weight:normal;
+}
+
+p{
+    margin-top:15px;
+    color:#a78655;
+    font-size:18px;
+}
+
+/* Contenido */
+#contenido{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:white;
+}
+
+#contenido iframe{
+    width:100%;
+    height:100%;
+    border:none;
+}
+
+/* Brillos de fondo */
+#brillos{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.7) 2px, transparent 3px),
+        radial-gradient(circle at 80% 30%, rgba(255,255,255,.6) 2px, transparent 3px),
+        radial-gradient(circle at 30% 80%, rgba(255,255,255,.7) 2px, transparent 3px),
+        radial-gradient(circle at 70% 70%, rgba(255,255,255,.5) 2px, transparent 3px);
+    animation:brillo 5s linear infinite;
+}
+
+@keyframes brillo{
+    0%{
+        opacity:.3;
+    }
+    50%{
+        opacity:1;
+    }
+    100%{
+        opacity:.3;
+    }
+}
