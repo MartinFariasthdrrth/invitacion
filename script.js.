@@ -1,0 +1,20 @@
+const sobre = document.getElementById("sobre");
+const inicio = document.getElementById("inicio");
+const contenido = document.getElementById("contenido");
+const musica = document.getElementById("musica");
+
+contenido.style.display = "none";
+
+sobre.addEventListener("click", () => {
+
+    musica.play();
+
+    sobre.style.transform = "scale(0.8) rotateX(25deg)";
+    sobre.style.opacity = "0";
+
+    setTimeout(() => {
+        inicio.style.display = "none";
+        contenido.style.display = "block";
+    }, 1200);
+
+});
